@@ -172,6 +172,9 @@ pygame.init()
 window_width, window_height = 1280, 720 
 display_surface = pygame.display.set_mode((window_width, window_height))
 pygame.display.set_caption("Alien Blaster")
+icon = pygame.image.load(join('Images', 'Player.png')).convert_alpha()
+icon = pygame.transform.scale(icon, (32, 32))
+pygame.display.set_icon(icon)
 running = True
 clock = pygame.time.Clock()
 
